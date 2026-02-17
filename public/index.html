@@ -17,11 +17,16 @@
     <header class="main-header">
         <!-- Brand Name in Top Left -->
         <a href="index.html" class="brand-name" style="text-decoration: none; color: inherit;">KUZENKY STO</a>
-        <span class="header-tagline">Твоє авто — наша пристрасть!</span>
-        <nav style="margin-left: auto;">
-            <a href="#about" class="nav-btn">ПРО НАС</a>
-            <a href="#contacts" class="nav-btn">КОНТАКТИ</a>
-            <a href="price.html" class="nav-btn">ПРАЙС</a>
+        <span class="header-tagline" data-i18n="hero_title">Твоє авто — наша пристрасть!</span>
+        <nav style="margin-left: auto; display: flex; align-items: center; gap: 1rem;">
+            <a href="#about" class="nav-btn" data-i18n="nav_about">ПРО НАС</a>
+            <a href="#contacts" class="nav-btn" data-i18n="nav_contacts">КОНТАКТИ</a>
+            <a href="price.html" class="nav-btn" data-i18n="nav_price">ПРАЙС</a>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="uk">UA</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="sk">SK</button>
+            </div>
         </nav>
     </header>
 
@@ -41,21 +46,24 @@
                             d="M21.71 11.29l-9-9c-0.39-0.39-1.02-0.39-1.41 0l-9 9c-0.39 0.39-0.39 1.02 0 1.41l9 9c0.39 0.39 1.02 0.39 1.41 0l9-9c0.39-0.38 0.39-1.01 0-1.41zM14 14.5V12h-4v3H8v-4c0-0.55 0.45-1 1-1h5V7.5l3.5 3.5-3.5 3.5z" />
                     </svg>
                 </div>
-                <span class="service-status">Service is working</span>
+                <span class="service-status" data-i18n="service_working">Service is working</span>
             </div>
 
             <main class="content-area">
                 <div class="hero-text">
-                    <h1>ВАШ<br>АВТОМАЙСТЕР</h1>
+                    <h1 data-i18n="hero_title">ВАШ<br>АВТОМАЙСТЕР</h1>
                 </div>
                 <div class="sub-text">
-                    <p>Професійне обслуговування вашого авто з використанням сучасного обладнання.</p>
-                    <p>Ми дбаємо про вашу безпеку на дорозі, гарантуючи якість кожної деталі та виконаної роботи.</p>
-                    <p>Прозорі ціни, досвідчені майстри та індивідуальний підхід до кожного клієнта.</p>
+                    <p data-i18n="hero_desc_1">Професійне обслуговування вашого авто з використанням сучасного
+                        обладнання.</p>
+                    <p data-i18n="hero_desc_2">Ми дбаємо про вашу безпеку на дорозі, гарантуючи якість кожної деталі та
+                        виконаної роботи.</p>
+                    <p data-i18n="hero_desc_3">Прозорі ціни, досвідчені майстри та індивідуальний підхід до кожного
+                        клієнта.</p>
                 </div>
 
                 <div class="cta-container">
-                    <button class="cta-button" id="cta-btn">Записатись на ремонт ➜</button>
+                    <button class="cta-button" id="cta-btn" data-i18n="cta_button">Записатись на ремонт ➜</button>
                 </div>
             </main>
         </div>
@@ -64,7 +72,7 @@
     <!-- Info Section (Features, Value Prop, Partners) -->
     <section class="info-section">
 
-        <h2 class="section-title express-title">НАШІ ПЕРЕВАГИ</h2>
+        <h2 class="section-title express-title" data-i18n="features_title">НАШІ ПЕРЕВАГИ</h2>
 
         <!-- Features Grid -->
         <div class="features-grid">
@@ -76,8 +84,8 @@
                             d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
                     </svg>
                 </div>
-                <h3>ГАРАНТІЯ ЯКОСТІ</h3>
-                <p>Ми надаємо офіційну гарантію на всі виды робіт та запчастини.</p>
+                <h3 data-i18n="feature_warranty_title">ГАРАНТІЯ ЯКОСТІ</h3>
+                <p data-i18n="feature_warranty_desc">Ми надаємо офіційну гарантію на всі виды робіт та запчастини.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">
@@ -86,8 +94,8 @@
                         <path d="M7 2v11h3v9l7-12h-4l4-8z" />
                     </svg>
                 </div>
-                <h3>ШВИДКІСТЬ</h3>
-                <p>Оперативний ремонт без втрати якості. Ми цінуємо ваш час.</p>
+                <h3 data-i18n="feature_speed_title">ШВИДКІСТЬ</h3>
+                <p data-i18n="feature_speed_desc">Оперативний ремонт без втрати якості. Ми цінуємо ваш час.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">
@@ -97,8 +105,8 @@
                             d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                     </svg>
                 </div>
-                <h3>НАДІЙНІСТЬ</h3>
-                <p>Тільки оригінальні запчастини та сертифіковані майстри.</p>
+                <h3 data-i18n="feature_reliability_title">НАДІЙНІСТЬ</h3>
+                <p data-i18n="feature_reliability_desc">Тільки оригінальні запчастини та сертифіковані майстри.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">
@@ -108,8 +116,8 @@
                             d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" />
                     </svg>
                 </div>
-                <h3>ЧЕСНІ ЦІНИ</h3>
-                <p>Прозорий розрахунок без прихованих платежів.</p>
+                <h3 data-i18n="feature_price_title">ЧЕСНІ ЦІНИ</h3>
+                <p data-i18n="feature_price_desc">Прозорий розрахунок без прихованих платежів.</p>
             </div>
         </div>
 
@@ -117,34 +125,34 @@
         <div class="stats-section">
             <div class="stat-item">
                 <span class="stat-number" data-target="2500">0</span>
-                <span class="stat-label">Успішних ремонтів</span>
+                <span class="stat-label" data-i18n="stat_repairs">Успішних ремонтів</span>
             </div>
             <div class="stat-item">
                 <span class="stat-number" data-target="5">0</span>
-                <span class="stat-label">Років досвіду</span>
+                <span class="stat-label" data-i18n="stat_experience">Років досвіду</span>
             </div>
             <div class="stat-item">
                 <div class="stat-row"><span class="stat-number" data-target="98">0</span><span
                         class="stat-suffix">%</span></div>
-                <span class="stat-label">Задоволених клієнтів</span>
+                <span class="stat-label" data-i18n="stat_clients">Задоволених клієнтів</span>
             </div>
             <div class="stat-item">
                 <span class="stat-number" data-target="15">0</span>
-                <span class="stat-label">Майстрів у команді</span>
+                <span class="stat-label" data-i18n="stat_team">Майстрів у команді</span>
             </div>
         </div>
 
         <!-- Our Works Gallery -->
         <div class="works-gallery">
-            <h2>НАШІ РОБОТИ</h2>
+            <h2 data-i18n="works_title">НАШІ РОБОТИ</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <div class="img-wrapper">
                         <img src="audi.png" alt="Audi Repair">
                     </div>
                     <div class="work-caption">
-                        <span class="problem-label">PROBLEM SOLVED:</span><br>
-                        Engine Overhaul
+                        <span class="problem-label" data-i18n="work_problem">PROBLEM SOLVED:</span><br>
+                        <span data-i18n="work_engine">Engine Overhaul</span>
                     </div>
                 </div>
                 <div class="gallery-item">
@@ -152,8 +160,8 @@
                         <img src="bmw.png" alt="BMW Repair">
                     </div>
                     <div class="work-caption">
-                        <span class="problem-label">PROBLEM SOLVED:</span><br>
-                        Transmission Fix
+                        <span class="problem-label" data-i18n="work_problem">PROBLEM SOLVED:</span><br>
+                        <span data-i18n="work_transmission">Transmission Fix</span>
                     </div>
                 </div>
                 <div class="gallery-item">
@@ -161,8 +169,8 @@
                         <img src="mers.png" alt="Mercedes Repair">
                     </div>
                     <div class="work-caption">
-                        <span class="problem-label">PROBLEM SOLVED:</span><br>
-                        Brake System
+                        <span class="problem-label" data-i18n="work_problem">PROBLEM SOLVED:</span><br>
+                        <span data-i18n="work_brake">Brake System</span>
                     </div>
                 </div>
                 <div class="gallery-item">
@@ -170,8 +178,8 @@
                         <img src="Porshe.png" alt="Porsche Repair">
                     </div>
                     <div class="work-caption">
-                        <span class="problem-label">PROBLEM SOLVED:</span><br>
-                        Electronics Diagnostics
+                        <span class="problem-label" data-i18n="work_problem">PROBLEM SOLVED:</span><br>
+                        <span data-i18n="work_electronics">Electronics Diagnostics</span>
                     </div>
                 </div>
             </div>
@@ -179,16 +187,19 @@
 
         <!-- NEW About Section -->
         <div class="about-section" id="about">
-            <h2>ПРО НАС</h2>
-            <p>Наша майстерня відкрилася у 2020 році і з того часу ми невпинно працюємо над удосконаленням сервісу. За
+            <h2 data-i18n="about_title">ПРО НАС</h2>
+            <p data-i18n="about_text_1">Наша майстерня відкрилася у 2020 році і з того часу ми невпинно працюємо над
+                удосконаленням сервісу. За
                 цей час ми обслужили тисячі автомобілів та здобули довіру клієнтів.</p>
-            <p>Ми пишаємося нашою командою професіоналів та результатами нашої роботи. У нас завжди йдуть справи вгору,
+            <p data-i18n="about_text_2">Ми пишаємося нашою командою професіоналів та результатами нашої роботи. У нас
+                завжди йдуть справи вгору,
                 тому що ми любимо те, що робимо.</p>
         </div>
 
         <div class="value-prop">
-            <h2>ЧОМУ ОБИРАЮТЬ НАС?</h2>
-            <p>Наша майстерня - це поєднання багаторічного досвіду та сучасних технологій. Ми не просто ремонтуємо авто,
+            <h2 data-i18n="why_us_title">ЧОМУ ОБИРАЮТЬ НАС?</h2>
+            <p data-i18n="why_us_text">Наша майстерня - це поєднання багаторічного досвіду та сучасних технологій. Ми не
+                просто ремонтуємо авто,
                 ми дбаємо про вашу безпеку на дорозі. Індивідуальний підхід до кожного клієнта та прозоре ціноутворення
                 - наші головні принципи.</p>
         </div>
@@ -198,12 +209,13 @@
 
     <!-- Contact Form Section (Hidden until scrolled) -->
     <section id="contact-form" class="contact-section">
-        <h2>Запис на ремонт</h2>
+        <h2 data-i18n="contact_form_title">Запис на ремонт</h2>
         <form>
-            <input type="text" placeholder="Ім'я" required maxlength="50">
+            <input type="text" placeholder="Ім'я" required maxlength="50"
+                data-i18n-placeholder="input_name_placeholder">
             <input type="tel" value="+380" required maxlength="17" pattern="\+380[0-9]{9}"
                 title="Формат: +380XXXXXXXXX">
-            <button type="submit">Відправити</button>
+            <button type="submit" data-i18n="btn_submit">Відправити</button>
         </form>
     </section>
 
@@ -211,31 +223,35 @@
         <div class="footer-content">
             <div class="footer-column">
                 <h3>KUZENKY STO</h3>
-                <p>Професійний автосервіс для вашого авто. Якість, швидкість та надійність — наші головні принципи з
+                <p data-i18n="footer_desc">Професійний автосервіс для вашого авто. Якість, швидкість та надійність —
+                    наші головні принципи з
                     2020 року.</p>
             </div>
             <div class="footer-column">
-                <h3>КОНТАКТИ</h3>
-                <p>📍 Україна, м. Івано-Франківськ,<br>вул. Валова 34</p>
+                <h3 data-i18n="footer_contacts_title">КОНТАКТИ</h3>
+                <p data-i18n="footer_address">📍 Україна, м. Івано-Франківськ,<br>вул. Валова 34</p>
                 <p>📞 +380 (99) 123-45-67</p>
                 <p>✉️ kuzenky.sto@gmail.com</p>
-                <p>🕒 Пн-Пт: 09:00 - 18:00<br>Сб: 10:00 - 15:00<br>Нд: Вихідний</p>
+                <p data-i18n="footer_schedule">🕒 Пн-Пт: 09:00 - 18:00<br>Сб: 10:00 - 15:00<br>Нд: Вихідний</p>
             </div>
             <div class="footer-column">
-                <h3>НАВІГАЦІЯ</h3>
-                <p><a href="#about" style="color: #94a3b8; text-decoration: none;">Про нас</a></p>
-                <p><a href="price.html" style="color: #94a3b8; text-decoration: none;">Прайс-лист</a></p>
-                <p><a href="#contact-form" style="color: #94a3b8; text-decoration: none;">Записатись</a></p>
+                <h3 data-i18n="footer_nav_title">НАВІГАЦІЯ</h3>
+                <p><a href="#about" style="color: #94a3b8; text-decoration: none;" data-i18n="footer_nav_about">Про
+                        нас</a></p>
+                <p><a href="price.html" style="color: #94a3b8; text-decoration: none;"
+                        data-i18n="footer_nav_price">Прайс-лист</a></p>
+                <p><a href="#contact-form" style="color: #94a3b8; text-decoration: none;"
+                        data-i18n="footer_nav_book">Записатись</a></p>
             </div>
             <div class="footer-column">
-                <h3>МИ В СОЦМЕРЕЖАХ</h3>
+                <h3 data-i18n="footer_social_title">МИ В СОЦМЕРЕЖАХ</h3>
                 <p><a href="#" style="color: #94a3b8; text-decoration: none;">📱 Instagram</a></p>
                 <p><a href="#" style="color: #94a3b8; text-decoration: none;">📘 Facebook</a></p>
                 <p><a href="#" style="color: #94a3b8; text-decoration: none;">💬 Telegram</a></p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 KUZENKY STO. All rights reserved.</p>
+            <p data-i18n="copyright">&copy; 2026 KUZENKY STO. All rights reserved.</p>
         </div>
     </footer>
 
@@ -244,6 +260,7 @@
         style="display:none; position:fixed; bottom:30px; right:30px; z-index:999; width:50px; height:50px; border-radius:50%; border:none; background:var(--highlight-color); color:#fff; font-size:1.5rem; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,0.3); transition: opacity 0.3s, transform 0.3s;"
         onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
 
+    <script src="js/i18n.js"></script>
     <script src="script.js"></script>
 </body>
 

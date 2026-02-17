@@ -1,0 +1,717 @@
+:root {
+    /* UI UX Pro Max - Motion Driven Palette */
+    --bg-color: #F8FAFC;
+    /* Very light grey/white background */
+    --text-color: #0F172A;
+    /* Dark text */
+    --accent-color: #1E293B;
+    /* Primary Dark Slate - used for borders/lines */
+    --highlight-color: #ff4d00;
+    /* User's Orange Accent */
+
+    --font-heading: 'Bebas Neue', sans-serif;
+    --font-body: 'Source Sans 3', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll from animations */
+}
+
+/* Animations & Transitions */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Layout */
+.main-container {
+    display: flex;
+    height: calc(100vh - 80px);
+    /* Subtract header height */
+    width: 100%;
+}
+
+/* Header & Nav */
+.main-header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--accent-color);
+    padding: 0 2rem;
+    width: 100%;
+    background-color: var(--bg-color);
+    /* Ensure it sits on top */
+    z-index: 100;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    /* Subtle depth */
+}
+
+/* Brand Name */
+.brand-name {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Header Tagline - Harley Style */
+.header-tagline {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.1rem;
+    color: var(--highlight-color);
+    letter-spacing: 1px;
+    white-space: nowrap;
+    transform: rotate(-2deg);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+nav {
+    display: flex;
+    gap: 0.5rem;
+    /* Reduced gap significantly */
+}
+
+/* Nav Buttons */
+.nav-btn {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    /* Increased size */
+    padding: 0.8rem 1.5rem;
+    /* Increased padding */
+    border: 3px solid var(--accent-color);
+    /* Thicker border */
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Removed transform to fix jumpiness */
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+/* About Section */
+
+/* Stats Counter Section */
+.stats-section {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 3rem 2rem;
+    background: var(--accent-color);
+    margin: 3rem 0;
+    border-radius: 12px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.stat-number,
+.stat-suffix {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--highlight-color);
+    line-height: 1;
+    display: inline;
+    height: 3.5rem;
+}
+
+.stat-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    height: 3.5rem;
+}
+
+.stat-label {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.75rem;
+    display: block;
+    height: 2.5rem;
+}
+
+/* About Section */
+.about-section {
+    padding: 4rem 2rem;
+    background-color: #f1f5f9;
+    /* Light contrast */
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 4rem;
+    border-radius: 12px;
+}
+
+.about-section h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.about-section p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #334155;
+    margin-bottom: 1rem;
+}
+
+/* Price Page */
+.price-container {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    min-height: 60vh;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.price-table th,
+.price-table td {
+    padding: 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.price-table th {
+    background-color: var(--accent-color);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.price-table tr:hover {
+    background-color: #f8fafc;
+}
+
+.price-table td {
+    font-size: 1.1rem;
+    color: #334155;
+}
+
+.price-table td:last-child {
+    font-weight: 700;
+    color: var(--highlight-color);
+}
+
+.nav-btn.active {
+    background-color: var(--highlight-color);
+    color: #fff;
+    border-color: var(--highlight-color);
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 3rem 2rem;
+    font-family: var(--font-body);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-column h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--highlight-color);
+    text-transform: uppercase;
+}
+
+.footer-column p {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+.nav-btn:hover {
+    background-color: var(--highlight-color);
+    color: #fff;
+    border-color: var(--highlight-color);
+    /* transform removed */
+}
+
+/* Left Section - Image */
+.left-section {
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(20%) contrast(110%);
+}
+
+/* Right Section - Content */
+.right-section {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    position: relative;
+    border-left: 2px solid var(--accent-color);
+    margin-left: -2px;
+    /* Overlap the border to avoid double lines or gaps */
+}
+
+/* Logo Area */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.gear-logo {
+    width: 40px;
+    /* Increased from 20px */
+    height: 40px;
+    flex-shrink: 0;
+    /* Prevent squashing */
+    animation: spin 4s linear infinite;
+}
+
+.gear-logo svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.service-status {
+    font-size: 1.2rem;
+    /* Increased from 0.7rem */
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--highlight-color);
+    /* Make sure it pops */
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hero Text */
+.content-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.hero-text h1 {
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    line-height: 0.9;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.sub-text p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+/* Call to Action */
+.cta-container {
+    align-self: flex-end;
+    /* Bottom right */
+    margin-top: auto;
+}
+
+.cta-button {
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--text-color);
+    padding: 1rem 2rem;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    /* Make it fill the container if desired, or keep auto */
+}
+
+.cta-button:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+/* Contact Form Section */
+.contact-section {
+    height: 100vh;
+    /* Take up another full screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 2rem;
+}
+
+.contact-section h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.contact-section input {
+    padding: 1rem;
+    border: 2px solid var(--accent-color);
+    background: transparent;
+    font-family: var(--font-body);
+}
+
+.contact-section button {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 1rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+    }
+
+    .left-section {
+        height: 40vh;
+    }
+
+    .right-section {
+        height: auto;
+        padding: 1rem;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Info Section (Features, Value Prop, Partners) */
+.info-section {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    color: var(--text-color);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Adjusted min-width for 4 items */
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    background: #fff;
+    border-radius: 8px;
+    /* Soft UI */
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--highlight-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* Lift effect */
+}
+
+.feature-card .icon {
+    width: 64px;
+    /* Larger icons */
+    height: 64px;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card .icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.feature-card h3 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    /* Larger Title */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.feature-card p {
+    font-size: 1.2rem;
+    /* Larger Description */
+    line-height: 1.6;
+    color: #555;
+    font-family: var(--font-body);
+}
+
+/* Works Gallery */
+.works-gallery {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.works-gallery h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    height: auto;
+    /* Allow height to grow for text */
+    overflow: visible;
+    border: none;
+    transition: all 0.3s ease;
+    background: transparent;
+    text-align: center;
+}
+
+.gallery-item .img-wrapper {
+    height: 250px;
+    /* Slightly taller images */
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    margin-bottom: 1rem;
+    position: relative;
+    border-radius: 8px;
+    /* Soft corners */
+}
+
+.gallery-item:hover .img-wrapper {
+    border-color: var(--highlight-color);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: grayscale(100%);
+    /* B&W by default */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+    /* Subtle zoom */
+    filter: grayscale(0%);
+    /* Color on hover */
+}
+
+.work-caption {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.4;
+}
+
+.problem-label {
+    font-weight: 700;
+    color: var(--highlight-color);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.value-prop {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.value-prop h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.value-prop p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.partners-section {
+    text-align: center;
+}
+
+.partners-title {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #888;
+    letter-spacing: 2px;
+}
+
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* ... existing footer styles ... */
+
+/* Visual Separator */
+.section-separator {
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color) 0%, var(--highlight-color) 50%, var(--accent-color) 100%);
+    width: 100%;
+    margin-top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Standardized Large Headers */
+.section-title,
+.works-gallery h2,
+.value-prop h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem !important;
+    /* Force 2x bigger size */
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* Extra Large Title for Advantages */
+.express-title {
+    font-size: 3.5rem !important;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+/* Partner Logos */
+.partner-logo-img {
+    height: 60px;
+    /* Consistent height */
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.7);
+    transition: all 0.3s ease;
+}
+
+.partner-logo-img:hover {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.1);
+}

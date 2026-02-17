@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Nazar Ukrainets</title>
+    <link rel="shortcut icon" href="src/logo.ico" type="image/x-icon">
+    <!-- Premium Fonts: Outfit for headings, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body id="body">
+    <div class="background-globes"></div>
+    <div class="overlay" id="overlay"></div>
+
+    <div class="layout">
+        <!-- Mobile Menu Trigger -->
+        <div class="burger" id="burger">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 18L20 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M4 6L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </div>
+
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar__inner">
+                <div class="logo">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25" cy="25" r="25" fill="#161b22" />
+                        <path d="M15 15V35L35 15V35" stroke="#DAF765" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M15 15L35 35" stroke="#DAF765" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="sidebar__user">
+                    <div class="sidebar__name">Nazar Kuzenko</div>
+                    <div class="sidebar__text">Frontend Developer</div>
+                </div>
+
+                <nav class="sidebar__nav">
+                    <button class="nav-item active" data-target="projects">
+                        <span class="icon">📂</span>
+                        <span>Projects</span>
+                    </button>
+                    <button class="nav-item" data-target="about">
+                        <span class="icon">👤</span>
+                        <span>About Me</span>
+                    </button>
+                    <button class="nav-item" data-target="contact">
+                        <span class="icon">✉️</span>
+                        <span>Contact</span>
+                    </button>
+                </nav>
+
+                <div class="sidebar__footer">
+                    <p>&copy; 2026 Nazar K.</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content">
+            <div class="container">
+
+                <!-- Projects Section -->
+                <section id="projects" class="section active">
+                    <header class="section-header">
+                        <h1 class="title">My Projects</h1>
+                        <p class="subtitle">A collection of my recent work and experiments.</p>
+                    </header>
+
+                    <div class="projects-grid">
+                        <!-- Project Card: Kuzenky STO -->
+                        <article class="project-card">
+                            <div class="card-image"
+                                style="background-image: url('../public/mekanik.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="card-content">
+                                <h3>Kuzenky STO</h3>
+                                <p>Car Service Station Website (Static Version).</p>
+                                <div class="tags">
+                                    <span>HTML</span><span>CSS</span><span>JS</span>
+                                </div>
+                                <a href="../public/index.html" class="btn-view">View Project</a>
+                            </div>
+                        </article>
+
+                        <!-- Project Card 2 -->
+                        <article class="project-card">
+                            <div class="card-image placeholder-gradient-2"></div>
+                            <div class="card-content">
+                                <h3>Task Master App</h3>
+                                <p>Productivity application with drag-and-drop kanban boards.</p>
+                                <div class="tags">
+                                    <span>Vue.js</span><span>Firebase</span>
+                                </div>
+                                <a href="#" class="btn-view">View Project</a>
+                            </div>
+                        </article>
+
+                        <!-- Project Card 3 -->
+                        <article class="project-card">
+                            <div class="card-image placeholder-gradient-3"></div>
+                            <div class="card-content">
+                                <h3>Portfolio v1</h3>
+                                <p>The first iteration of my personal portfolio site.</p>
+                                <div class="tags">
+                                    <span>HTML</span><span>CSS</span><span>JS</span>
+                                </div>
+                                <a href="#" class="btn-view">View Project</a>
+                            </div>
+                        </article>
+
+                        <!-- Project Card 1 (Moved) -->
+                        <article class="project-card">
+                            <div class="card-image placeholder-gradient-1"></div>
+                            <div class="card-content">
+                                <h3>E-Commerce Dashboard</h3>
+                                <p>A modern dashboard for tracking sales and inventory with real-time charts.</p>
+                                <div class="tags">
+                                    <span>React</span><span>ChartJS</span><span>Node</span>
+                                </div>
+                                <a href="#" class="btn-view">View Project</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- About Section -->
+                <section id="about" class="section hidden">
+                    <header class="section-header">
+                        <h1 class="title">About Me</h1>
+                    </header>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>Hello! I'm Nazar, a passionate Frontend Developer based in Ukraine. I love creating
+                                beautiful, functional, and user-friendly websites.</p>
+                            <p>My journey started with simple HTML pages and has evolved into building complex web
+                                applications using modern frameworks.</p>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-tag">JavaScript</div>
+                            <div class="skill-tag">React</div>
+                            <div class="skill-tag">CSS/SCSS</div>
+                            <div class="skill-tag">Git</div>
+                            <div class="skill-tag">UI/UX Design</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                <section id="contact" class="section hidden">
+                    <header class="section-header">
+                        <h1 class="title">Get in Touch</h1>
+                    </header>
+                    <div class="contact-card">
+                        <p>Interested in working together? Let's talk!</p>
+                        <a href="mailto:kuzenko.dev@gmail.com" class="btn-primary">Send Email</a>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="src/index.js"></script>
+</body>
+
+</html>
